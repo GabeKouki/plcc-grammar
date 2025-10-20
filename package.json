@@ -1,0 +1,30 @@
+{
+  "name": "plcc-grammar",
+  "displayName": "PLCC Grammar",
+  "description": "Syntax highlighting for PLCC .grammar files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "plcc",
+      "aliases": ["PLCC Grammar", "plcc"],
+      "extensions": [".grammar"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "plcc",
+      "scopeName": "source.plcc",
+      "path": "./syntaxes/plcc.tmLanguage.json"
+    }],
+    "themes": [{
+      "label": "PLCC Natural Theme",
+      "uiTheme": "vs-dark",
+      "path": "./themes/plcc-natural-theme.json"
+    }]
+  }
+}

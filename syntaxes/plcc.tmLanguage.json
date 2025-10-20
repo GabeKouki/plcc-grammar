@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "PLCC Grammar",
+  "scopeName": "source.plcc",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#includeDirective" },
+    { "include": "#grammarRuleWithLabel" },
+    { "include": "#grammarRuleNoLabel" },
+    { "include": "#tokenDefinition" },
+    { "include": "#rhsNonterminal" },
+    { "include": "#terminal" },
+    { "include": "#specialMarker" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.percentage.plcc",
+          "match": "%.*$"
+        },
+        {
+          "name": "comment.line.number-sign.plcc",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "includeDirective": {
+      "name": "keyword.control.import.plcc",
+      "match": "^%include\\s+\\w+"
+    },
+    "tokenDefinition": {
+      "match": "^(skip\\s+)?(\\w+)\\s+('(?:[^'\\\\]|\\\\.)*')",
+      "captures": {
+        "1": {
+          "name": "keyword.control.plcc"
+        },
+        "2": {
+          "name": "entity.name.type.plcc"
+        },
+        "3": {
+          "name": "string.quoted.single.plcc"
+        }
+      }
+    },
+    "grammarRuleWithLabel": {
+      "match": "(<\\w+>)(:)(\\w+)\\s*(::=|\\*\\*=)",
+      "captures": {
+        "1": {
+          "name": "entity.name.type.lhs.plcc"
+        },
+        "2": {
+          "name": "punctuation.separator.plcc"
+        },
+        "3": {
+          "name": "entity.name.function.plcc"
+        },
+        "4": {
+          "name": "keyword.operator.assignment.plcc"
+        }
+      }
+    },
+    "grammarRuleNoLabel": {
+      "match": "(<\\w+>)\\s*(::=|\\*\\*=)",
+      "captures": {
+        "1": {
+          "name": "entity.name.type.lhs.plcc"
+        },
+        "2": {
+          "name": "keyword.operator.assignment.plcc"
+        }
+      }
+    },
+    "rhsNonterminal": {
+      "name": "variable.parameter.plcc",
+      "match": "<\\w+>"
+    },
+    "terminal": {
+      "name": "constant.language.plcc",
+      "match": "\\b[A-Z][A-Z0-9]*\\b"
+    },
+    "specialMarker": {
+      "name": "keyword.operator.plcc",
+      "match": "\\+\\w+"
+    }
+  }
+}
