@@ -31,6 +31,7 @@ Once installed, the extension will automatically activate when you open any `.gr
 ## Supported File Types
 
 - `.grammar` - PLCC grammar definition files
+- 
 
 ## Requirements
 

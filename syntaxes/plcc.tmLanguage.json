@@ -4,30 +4,35 @@
   "scopeName": "source.plcc",
   "patterns": [
     { "include": "#comments" },
+    { "include": "#sectionSeparator" },
     { "include": "#includeDirective" },
+    { "include": "#tokenDefinition" },
     { "include": "#grammarRuleWithLabel" },
     { "include": "#grammarRuleNoLabel" },
-    { "include": "#tokenDefinition" },
-    { "include": "#rhsNonterminal" },
-    { "include": "#terminal" },
-    { "include": "#specialMarker" }
+    { "include": "#separatorNotation" },
+    { "include": "#rhsUppercaseNonterminal" },
+    { "include": "#rhsLowercaseNonterminal" },
+    { "include": "#bareTerminal" }
   ],
   "repository": {
     "comments": {
-      "patterns": [
-        {
-          "name": "comment.line.percentage.plcc",
-          "match": "%.*$"
-        },
-        {
-          "name": "comment.line.number-sign.plcc",
-          "match": "#.*$"
-        }
-      ]
+      "name": "comment.line.plcc",
+      "match": "#.*$"
+    },
+    "sectionSeparator": {
+      "name": "keyword.operator.plcc",
+      "match": "^%$"
     },
     "includeDirective": {
-      "name": "keyword.control.import.plcc",
-      "match": "^%include\\s+\\w+"
+      "match": "^(%include)\\s+(\\w+)",
+      "captures": {
+        "1": {
+          "name": "keyword.control.plcc"
+        },
+        "2": {
+          "name": "variable.parameter.plcc"
+        }
+      }
     },
     "tokenDefinition": {
       "match": "^(skip\\s+)?(\\w+)\\s+('(?:[^'\\\\]|\\\\.)*')",
@@ -47,16 +52,16 @@
       "match": "(<\\w+>)(:)(\\w+)\\s*(::=|\\*\\*=)",
       "captures": {
         "1": {
-          "name": "entity.name.type.lhs.plcc"
+          "name": "variable.other.plcc"
         },
         "2": {
-          "name": "punctuation.separator.plcc"
+          "name": "comment.line.plcc"
         },
         "3": {
           "name": "entity.name.function.plcc"
         },
         "4": {
-          "name": "keyword.operator.assignment.plcc"
+          "name": "keyword.operator.plcc"
         }
       }
     },
@@ -64,24 +69,28 @@
       "match": "(<\\w+>)\\s*(::=|\\*\\*=)",
       "captures": {
         "1": {
-          "name": "entity.name.type.lhs.plcc"
+          "name": "variable.other.plcc"
         },
         "2": {
-          "name": "keyword.operator.assignment.plcc"
+          "name": "keyword.operator.plcc"
         }
       }
     },
-    "rhsNonterminal": {
-      "name": "variable.parameter.plcc",
-      "match": "<\\w+>"
+    "separatorNotation": {
+      "name": "constant.numeric.plcc",
+      "match": "\\+[A-Z][A-Z0-9]*"
     },
-    "terminal": {
-      "name": "constant.language.plcc",
+    "rhsUppercaseNonterminal": {
+      "name": "entity.name.type.plcc",
+      "match": "<[A-Z][A-Z0-9]*>"
+    },
+    "rhsLowercaseNonterminal": {
+      "name": "variable.other.plcc",
+      "match": "<[a-z][a-z0-9]*>"
+    },
+    "bareTerminal": {
+      "name": "entity.name.type.plcc",
       "match": "\\b[A-Z][A-Z0-9]*\\b"
-    },
-    "specialMarker": {
-      "name": "keyword.operator.plcc",
-      "match": "\\+\\w+"
     }
   }
 }

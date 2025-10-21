@@ -1,40 +1,25 @@
 {
   "name": "PLCC Natural Theme",
   "type": "dark",
-  "colors": {
-    "editor.background": "#1e1e1e",
-    "editor.foreground": "#d4d4d4"
-  },
   "tokenColors": [
     {
-      "scope": "comment.line.number-sign.plcc",
+      "scope": "comment.line.plcc",
       "settings": {
-        "foreground": "#808080"
+        "foreground": "#6A9955",
+        "fontStyle": "italic"
       }
     },
     {
-      "scope": "comment.line.percentage.plcc",
-      "settings": {
-        "foreground": "#00D7FF"
-      }
-    },
-    {
-      "scope": "keyword.control.import.plcc",
+      "scope": "keyword.control.plcc",
       "settings": {
         "foreground": "#C586C0",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": "keyword.control.plcc",
-      "settings": {
-        "foreground": "#C586C0"
-      }
-    },
-    {
       "scope": "entity.name.type.plcc",
       "settings": {
-        "foreground": "#569CD6",
+        "foreground": "#4FC1FF",
         "fontStyle": "bold"
       }
     },
@@ -45,48 +30,35 @@
       }
     },
     {
-      "scope": "entity.name.type.lhs.plcc",
+      "scope": "keyword.operator.plcc",
       "settings": {
-        "foreground": "#DCDCAA",
+        "foreground": "#D16969",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": "punctuation.separator.plcc",
-      "settings": {
-        "foreground": "#D4D4D4"
-      }
-    },
-    {
-      "scope": "entity.name.function.plcc",
+      "scope": "variable.other.plcc",
       "settings": {
         "foreground": "#DCDCAA"
       }
     },
     {
-      "scope": "keyword.operator.assignment.plcc",
+      "scope": "entity.name.function.plcc",
       "settings": {
-        "foreground": "#C586C0",
+        "foreground": "#4EC9B0",
         "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "constant.numeric.plcc",
+      "settings": {
+        "foreground": "#B5CEA8"
       }
     },
     {
       "scope": "variable.parameter.plcc",
       "settings": {
         "foreground": "#9CDCFE"
-      }
-    },
-    {
-      "scope": "constant.language.plcc",
-      "settings": {
-        "foreground": "#569CD6",
-        "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": "keyword.operator.plcc",
-      "settings": {
-        "foreground": "#C586C0"
       }
     }
   ]
