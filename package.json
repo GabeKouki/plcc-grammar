@@ -4,7 +4,7 @@
   "publisher": "gabekouki",
   "author": "Gabe Kouki",
   "description": "Syntax highlighting for PLCC .grammar files",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.105.0"
   },
@@ -21,12 +21,13 @@
   "categories": [
     "Programming Languages"
   ],
-  "icon": "images/plcc-logo.png",
+  "icon": "images/PLCC.png",
   "contributes": {
     "languages": [{
       "id": "plcc",
       "aliases": ["PLCC Grammar", "plcc"],
       "extensions": [".grammar"],
+      "filenames": ["*grammar"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
