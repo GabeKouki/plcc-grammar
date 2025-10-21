@@ -48,7 +48,7 @@ Initial release of PLCC Grammar syntax highlighter:
 
 ## Feedback & Contributions
 
-Found a bug or have a feature request? Please open an issue on the [GitHub repository]([your-repo-url-here](https://github.com/GabeKouki/plcc-grammar)).
+Found a bug or have a feature request? Please open an issue on the [GitHub repository](https://github.com/GabeKouki/plcc-grammar).
 
 ## About PLCC
 
