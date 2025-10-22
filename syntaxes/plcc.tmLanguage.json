@@ -78,15 +78,15 @@
     },
     "separatorNotation": {
       "name": "constant.numeric.plcc",
-      "match": "\\+[A-Z][A-Z0-9]*"
+      "match": "\\+[A-Z]\\w*"
     },
     "rhsUppercaseNonterminal": {
       "name": "entity.name.type.plcc",
-      "match": "<[A-Z][A-Z0-9]*>"
+      "match": "<[A-Z]\\w*>"
     },
     "rhsLowercaseNonterminal": {
       "name": "variable.other.plcc",
-      "match": "<[a-z][a-z0-9]*>"
+      "match": "<[a-z]\\w*>"
     },
     "bareTerminal": {
       "name": "entity.name.type.plcc",

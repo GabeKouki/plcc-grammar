@@ -2,6 +2,15 @@
 
 All notable changes to the "plcc-grammar" extension will be documented in this file.
 
+## [0.0.4] - 2025-10-21
+
+### Fixed
+- Fixed syntax highlighting for camelCase identifiers in angle brackets (e.g., `<letDecls>`, `<seqExps>`, `<formals>`)
+- Improved regex patterns to properly handle mixed-case non-terminals
+
+### Changed
+- Updated README documentation
+
 ## [0.0.3] - 2025-10-21
 
 ### Changed

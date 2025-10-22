@@ -1,4 +1,3 @@
-
 # PLCC Grammar Syntax Highlighter
 
 Syntax highlighting support for PLCC (Programming Language Compiler Compiler) `.grammar` files in Visual Studio Code.
@@ -31,7 +30,7 @@ Once installed, the extension will automatically activate when you open any `.gr
 ## Supported File Types
 
 - `.grammar` - PLCC grammar definition files
-- 
+- Files ending with **`grammar`** (e.g., **`lonngrammar`**, **`grammar`**)
 
 ## Requirements
 

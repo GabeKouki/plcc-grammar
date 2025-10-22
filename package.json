@@ -27,7 +27,7 @@
       "id": "plcc",
       "aliases": ["PLCC Grammar", "plcc"],
       "extensions": [".grammar"],
-      "filenames": ["*grammar"],
+      "filenames": ["grammar"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
@@ -39,6 +39,15 @@
       "label": "PLCC Natural Theme",
       "uiTheme": "vs-dark",
       "path": "./themes/plcc-natural-theme.json"
-    }]
+    }],
+    "configurationDefaults": {
+      "[plcc]": {
+        "editor.tabSize": 2
+      },
+      "files.associations": {
+        "*grammar": "plcc",
+        "grammar": "plcc"
+      }
+    }
   }
 }
