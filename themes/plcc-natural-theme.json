@@ -52,7 +52,8 @@
     {
       "scope": "constant.numeric.plcc",
       "settings": {
-        "foreground": "#B5CEA8"
+        "foreground": "#B5CEA8",
+        "fontStyle": "bold"
       }
     },
     {
